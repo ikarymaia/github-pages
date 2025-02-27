@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaiago - Nosso Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .story {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .story h2 {
+            color: #ff6347;
+        }
+        .story p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .photos img {
+            width: 80%;
+            border-radius: 8px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .music {
+            margin-top: 30px;
+        }
+        footer {
+            background: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Thaiago - Nosso Amor</h1>
+</header>
+
+<div class="content">
+    <div class="story">
+        <h2>Como nos Conhecemos</h2>
+        <p>Nos conhecemos em um aplicativo de encontros, mas fizemos isso de uma forma bem descontraída. A G começou a conversar, e logo nos encontramos, logo após Tiago voltar de viagem. Isso aconteceu na semana entre o Natal e o Ano Novo de 2023. Desde então, não nos desgrudamos mais. Tivemos algumas brigas feias, mas estamos a cada dia melhorando juntos!</p>
+    </div>
+
+    <div class="story">
+        <h2>Nossos Momentos</h2>
+        <p>Hoje estudamos juntos e jogamos Valorant juntos. A cada dia, nos conhecemos mais e fortalecemos nosso amor com muitos momentos compartilhados!</p>
+    </div>
+
+    <div class="photos">
+        <h2>Fotos de Nós</h2>
+        <img src="sua-foto1.jpg" alt="Foto 1">
+        <img src="sua-foto2.jpg" alt="Foto 2">
+        <!-- Substitua com as fotos de vocês -->
+    </div>
+
+    <div class="music">
+        <h2>Música do Nosso Site</h2>
+        <p>A música do nosso site é "Sorriso Resplandecente" de Dragon Ball.</p>
+        <a href="https://www.youtube.com/watch?v=XXX">Clique aqui para ouvir</a>
+    </div>
+</div>
+
+<footer>
+    <p>Thaiago - Nosso Amor | 2023</p>
+</footer>
+
+</body>
+</html>
