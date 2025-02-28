@@ -1,0 +1,143 @@
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+            padding-top: 0;
+        }
+
+        
+        .header-image {
+            width: 100%;  
+            height: 400px;  
+            object-fit: cover;
+            display: block; 
+        }
+
+        header {
+            background: #ff4f81;
+            padding: 20px;
+            color: white;
+            font-size: 2em;
+            font-family: 'Great Vibes', cursive;
+            margin-top: 0; 
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .foto-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .foto-container img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .foto-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(255, 79, 129, 0.6);
+        }
+
+        .btn {
+            background: #ff4f81;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #e03e6e;
+        }
+
+        .remover {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(255, 0, 0, 0.8);
+            border: none;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .remover:hover {
+            background: red;
+        }
+
+        @keyframes floating-hearts {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            clip-path: polygon(50% 15%, 85% 15%, 100% 35%, 100% 60%, 50% 100%, 0 60%, 0 35%, 15% 15%);
+            opacity: 0.6;
+            animation: floating-hearts 5s linear infinite;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            section {
+                width: 90%;
+            }
+            .galeria {
+                flex-direction: column;
+            }
+        }
+    </style>
