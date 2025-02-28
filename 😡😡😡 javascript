@@ -1,0 +1,75 @@
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarFotos();
+            criarCorações();
+        });
+
+
+
+        function carregarFotos() {
+            let galeria = document.getElementById("galeria");
+            let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+
+            galeria.innerHTML = "";
+            fotos.forEach((src, index) => {
+                let fotoContainer = document.createElement("div");
+                fotoContainer.className = "foto-container";
+
+                let img = document.createElement("img");
+                img.src = src;
+
+                let btnRemover = document.createElement("button");
+                btnRemover.innerText = "X";
+                btnRemover.className = "remover";
+                btnRemover.onclick = () => removerFoto(index);
+
+                fotoContainer.appendChild(img);
+                fotoContainer.appendChild(btnRemover);
+                galeria.appendChild(fotoContainer);
+            });
+        }
+
+
+
+        function adicionarFoto() {
+            let input = document.getElementById("uploadFoto");
+            let file = input.files[0];
+
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function(event) {
+                    let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+                    fotos.push(event.target.result);
+                    localStorage.setItem("fotos", JSON.stringify(fotos));
+                    carregarFotos();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+
+
+        function removerFoto(index) {
+            let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+            fotos.splice(index, 1);
+            localStorage.setItem("fotos", JSON.stringify(fotos));
+            carregarFotos();
+        }
+
+
+        
+        function criarCorações() {
+            for (let i = 0; i < 15; i++) {
+                let heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+            setTimeout(criarCorações, 2000);
+        }
+    </script>
+
+</body>
+</html>
